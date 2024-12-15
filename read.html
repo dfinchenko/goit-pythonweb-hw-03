@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messages</title>
+</head>
+<body>
+    <h1>Saved messages</h1>
+    <ul>
+        {% for timestamp, message in messages.items() %}
+        <li><strong>{{ message.username }}</strong>: {{ message.message }}, {{ timestamp }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Home</a>
+</body>
+</html>
